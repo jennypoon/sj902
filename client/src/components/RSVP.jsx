@@ -31,7 +31,7 @@ class RSVP extends Component {
           <div>
             <h3>Your RSVP has been sent! Thank You!</h3>
             <p>Need to make a Change? Just submit another RSVP and we'll use the latest one</p>
-            <p>Got Questions? Email us at: jenny.poon@live.ca or call us at 604-716-7891</p>
+            <p>Got Questions? Email us at: stephenjenny2019@gmail.com or call us at 604-716-7891</p>
           </div>
           ) : (
           <div>

@@ -66,7 +66,7 @@ class RsvpForm extends Component {
 
       <div>
           <label className="left">
-            <p>Can we expect you on August 24, 2019?</p>
+            <p>Can we expect you on September 2, 2019?</p>
           </label>
 
           <label className="right">
@@ -100,9 +100,9 @@ class RsvpForm extends Component {
               <input className="rsvpColumn input" type="text" name="email" onChange={this.handleChange} required ></input><br/><br/>
 
               <label className="rsvpColumn">
-                # of Seats to Reserve:
+                Total of Seats to Reserve:
               </label>
-              <input className="rsvpColumn input" type="text" name="plusone" onChange={this.handleChange}></input><br/><br/>
+              <input className="rsvpColumn input" type="number" min="1" max="6" name="plusone" onChange={this.handleChange}></input><br/><br/>
 
               <label className="rsvpColumn">
                Full Name of Guests:

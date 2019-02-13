@@ -55,17 +55,18 @@ app.post('/api/rsvp', (req,res) => {
       var emailBody = {
         from: `Operation Penguin <postmaster@${process.env.MAILGUN_DOMAIN}>`,
         to: `${process.env.EMAIL}`,
-        subject: `WEDDING - ${req.body.name} has RSVP to your wedding`,
+        subject: `CHINESE WEDDING - ${req.body.name} has RSVP to your wedding`,
         text:
-        `${req.body.name} (${req.body.email}) has RSVP to your wedding!
+        `${req.body.name} (${req.body.email}) has RSVP to your Chinese Wedding!
 
           Here are the details:
 
           RSVP: ${req.body.rsvp === '1' ? (`Yes, coming!
-          Plus One: ${req.body.plusone}
-          Comments:${req.body.comments}`) : "Sorry, can't make it" }
+          Total Seats Reserved: ${req.body.plusone}
+          Guest Names: ${req.body.songs}
+          Mailing Address:${req.body.comments}`) : "Sorry, can't make it" }
 
-          For complete RSVP list, visit: http://jennystephen.herokuapp.com/rsvp/admin`
+          For complete RSVP list, visit: https://sj2019.herokuapp.com/rsvp/admin`
       };
 
       mailgun.messages().send(emailBody, function (error, body) {
