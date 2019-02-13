@@ -1,0 +1,50 @@
+
+.vertical-timeline-element-content {
+  font-family: 'Amaranth', sans-serif;
+  border: grey solid 0.5px;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-image: url(../images/background.jpg);
+  background-color: transparent;
+  background-position: cover;
+}
+
+.vertical-timeline::before {
+  width: 1px;
+  background-color: grey;
+  margin: -18px;
+}
+
+.vertical-timeline-element-icon {
+  background-color: #FFD3D9;
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-icon {
+  background-color: #FFD3D9;
+  margin: -5px;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px;
+  padding: 0px;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content::before {
+display: none;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content {
+  padding: 8px;
+  padding-right: 10px;
+}
+
+.vertical-timeline-element-date {
+  font-style: bold;
+  margin-left: 10px
+}
+
+.vertical-timeline-element--work {
+  /*background-image: url(../images/background.jpg)*/
+}
