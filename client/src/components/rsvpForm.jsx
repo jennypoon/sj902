@@ -65,75 +65,84 @@ class RsvpForm extends Component {
     return (
 
       <div>
-          <label className="left">
-            <p>Can we expect you on September 2, 2019?</p>
+
+          <label>
+            <span>Can we expect you on September 2, 2019?</span>
           </label>
 
-          <label className="right">
+          <p>
             <input type="radio" name="Yes" value="1"
               checked={this.state.selectedOption === "1"}
               onChange={this.handleOptionChange}
             />
-            Yes! Count me in!
-          </label>
+            <span>Yes! Count me in!</span>
+          </p>
 
-          <label className="right">
+          <p>
             <input type="radio" name ="No" value="0"
               checked={this.state.selectedOption === "0"}
               onChange={this.handleOptionChange}
             />
-            Sorry, can't make it
-          </label>
+            <span>Sorry, can't make it!</span>
+          </p>
+
 
           {this.state.selectedOption === "1" ? (
             <form className="rsvpForm" onSubmit={this.handleSubmit}>
-              <p>Please complete this form:</p>
+              <span>We're happy you can make it! Please complete this form:</span>
               {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
-              <label className="rsvpColumn">
-                First & Last Name:
+              <p>
+              <label>
+                First & Last Name<sup>*</sup>
               </label>
-              <input className="rsvpColumn input" type="text" name="name" onChange={this.handleChange} required ></input><br/><br/>
+              <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
 
-              <label className="rsvpColumn">
-                Your Email:
+              <label>
+                Your Email<sup>*</sup>
               </label>
-              <input className="rsvpColumn input" type="text" name="email" onChange={this.handleChange} required ></input><br/><br/>
+              <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
 
-              <label className="rsvpColumn">
-                Total of Seats to Reserve:
+              <label>
+                Total of Seats to Reserve<sup>*</sup>
               </label>
-              <input className="rsvpColumn input" type="number" min="1" max="6" name="plusone" onChange={this.handleChange}></input><br/><br/>
+              <input type="number" placeholder="#" min="1" max="6" name="plusone" onChange={this.handleChange} required></input><br/>
 
-              <label className="rsvpColumn">
-               Full Name of Guests:
+              <label>
+               Full Name of Guests
               </label>
-              <input className="rsvpColumn input" type="text" name="guestNames" onChange={this.handleChange}></input><br/><br/>
+              <input type="text" name="guestNames" placeholder="Jane Doe, John Doe" onChange={this.handleChange}></input><br/>
 
-               <label className="rsvpColumn">
-               Mailing Address:
+               <label>
+               Mailing Address
               </label>
-              <textarea className="rsvpColumn comment" type="text" name="mailAddress" onChange={this.handleChange}></textarea><br/><br/><br/><br/>
-              <button className="rsvpButton" onClick={this.handleClick}> Submit your RSVP! </button>
+              <textarea type="text" placeholder="123 ABC Street &#10;City, Province &#10;X1X 1X4" name="mailAddress" onChange={this.handleChange}></textarea><br/>
+              </p>
+              <p>
+              <button onClick={this.handleClick}> Submit your RSVP! </button>
+              </p>
             </form>
             ) : (
             <div>
-
               <form className="rsvpForm" onSubmit={this.handleSubmit}>
                 <p>Sorry to hear that you can't make it to our special day!</p>
-              {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
-              <label className="rsvpColumn">
-                First & Last Name:
-              </label>
-              <input className="rsvpColumn input" type="text" name="name" onChange={this.handleChange} required ></input><br/><br/>
+                {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
+                <p>
+                  <label>
+                    First & Last Name<sup>*</sup>
+                  </label>
+                  <input type="text" name="name" onChange={this.handleChange} required ></input><br/><br/>
+                  <label>
+                    Your Email<sup>*</sup>
+                  </label>
+                  <input type="text" name="email" onChange={this.handleChange} required ></input><br/><br/>
+                </p>
 
-              <label className="rsvpColumn">
-                Your Email:
-              </label>
-              <input className="rsvpColumn input" type="text" name="email" onChange={this.handleChange} required ></input><br/><br/><br/><br/>
-
-              <button className="rsvpButton" onClick={this.handleClick}> Submit your RSVP! </button>
+                <p>
+                  <button onClick={this.handleClick}> Submit your RSVP! </button>
+                </p>
               </form>
-            </div>)}
+            </div>
+            )}
           </div>
       )}
 }
