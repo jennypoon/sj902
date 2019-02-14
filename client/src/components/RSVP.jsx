@@ -34,7 +34,7 @@ class RSVP extends Component {
           </div>
           ) : (
           <div>
-            <h3>RSVP</h3>
+            <h1>RSVP</h1>
             <hr/>
             <RsvpForm invalidState={this.state.invalidEmail}
                       handleClick= {this.handleClick}
