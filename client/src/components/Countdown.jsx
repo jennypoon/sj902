@@ -15,7 +15,7 @@ class Countdown extends Component {
   componentDidMount() {
     // update every second
     this.interval = setInterval(() => {
-      const date = this.calculateCountdown("2019-08-24T00:00:00");
+      const date = this.calculateCountdown("2019-09-02T00:00:00");
       date ? this.setState(date) : this.stop();
     }, 1000);
   }
@@ -80,30 +80,8 @@ class Countdown extends Component {
       <div className="Countdown">
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.days)}</strong>
-              <span>{countDown.days === 1 ? ' Day' : ' Days'}</span>
-          </span>
-        </span>
-
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span> H</span>
-          </span>
-        </span>
-
-
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span> M</span>
-          </span>
-        </span>
-
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span> S</span>
+              {this.addLeadingZeros(countDown.days)}
+              <span>{countDown.days === 1 ? ' Day' : ' Days'} until September 2!</span>
           </span>
         </span>
       </div>
