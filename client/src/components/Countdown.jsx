@@ -89,12 +89,4 @@ class Countdown extends Component {
   }
 }
 
-// Countdown.propTypes = {
-//   date: PropTypes.string.isRequired
-// };
-
-// Countdown.defaultProps = {
-//   date: new Date()
-// };
-
 export default Countdown;
