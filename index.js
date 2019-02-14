@@ -73,7 +73,7 @@ app.post('/api/rsvp', (req,res) => {
         console.log("Email sent to Jenny and Stephen");
       })
 
-      res.json("RSP successfully saved in database")
+      res.json("RVSP successfully saved in database")
     })
 });
 
