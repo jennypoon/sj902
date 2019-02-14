@@ -75,7 +75,7 @@ class RsvpForm extends Component {
               checked={this.state.selectedOption === "1"}
               onChange={this.handleOptionChange}
             />
-            <span>Yes! Count me in!</span>
+            <span>Yes - Count me in!</span>
           </p>
 
           <p>
@@ -83,7 +83,7 @@ class RsvpForm extends Component {
               checked={this.state.selectedOption === "0"}
               onChange={this.handleOptionChange}
             />
-            <span>Sorry, can't make it!</span>
+            <span>No - Sorry, can't make it!</span>
           </p>
 
 
