@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:200,800');
 $red_color: #AC2618;
 
+table, th, td {
+  font-family: 'Julius Sans One', sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+
+}
+
+th {
+  width: 15%;
+}
+
+.landing {
+  background: url(./images/fall.jpg) no-repeat center center fixed;
+  height: 600px;
+  display: block;
+  overflow: hidden;
+}
 
 #contact {
   overflow-x: hidden;
-  border: 1px solid $red_color;
 }
 
 #contact>.inner>.split {
@@ -35,7 +53,7 @@ section {
 .inner {
     margin: 0 auto;
     max-width: 65em;
-    width: calc(100% - 3em);
+    width: calc(100% - 2em);
     display: flex;
     padding: 0!important;
 }
