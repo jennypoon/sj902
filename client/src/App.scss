@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:200,800');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400');
+
 $red_color: #AC2618;
 
 table, th, td {
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   border: 1px solid black;
   border-collapse: collapse;
   padding: 10px;
@@ -14,53 +16,19 @@ th {
   width: 15%;
 }
 
-.landing {
-  background: url(./images/fall.jpg) no-repeat center center fixed;
-  height: 600px;
-  display: block;
-  overflow: hidden;
+h1 {
+
+  color: $red_color
 }
 
-#contact {
-  overflow-x: hidden;
-}
-
-#contact>.inner>.split {
-    padding: 0;
-}
-
-#contact>.inner>.split>* {
-    padding: 1em 0 1em 1em;
-    position: relative;
-}
-
-.contact-method {
-    margin: 0 0 2em;
-    padding-left: 3.25em;
-    position: relative;
-}
-
-section {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-.inner {
-    margin: 0 auto;
-    max-width: 65em;
-    width: calc(100% - 2em);
-    display: flex;
-    padding: 0!important;
+h3 {
+  color: $red_color
 }
 
 
 * {
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   box-sizing: border-box;
 
@@ -69,7 +37,51 @@ section {
   }
 }
 
+.landing {
+  background: url(./images/fall.jpg) no-repeat center center fixed;
+  height: 600px;
+  display: block;
+  overflow: hidden;
+}
 
+.inner {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 65em;
+    width: calc(100% - 2em);
+    display: flex;
+    padding: 10px;
+    box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.3);
+}
+
+section {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+
+#contact {
+  overflow-x: hidden;
+  background-color: #f2f2f2;
+}
+
+#contact>.inner>.split>* {
+    padding: 1em 0 1em 1em;
+    position: relative;
+    margin-right: 20px;
+}
+
+.contact-method {
+    padding-left: 3.25em;
+    position: relative;
+}
 /*FORM*/
 
 h3 {
@@ -79,6 +91,7 @@ h3 {
 .rsvpForm {
   margin: 0 auto;
 }
+
 
 form {
   display: grid;
@@ -92,7 +105,8 @@ input,textarea {
   padding: 0.3em;
 
   &:focus:not([type=radio]) {
-    outline: 1px solid $red_color;
+    outline: 1px solid grey;
+    font-weight: 400;
   }
 }
 
@@ -106,7 +120,7 @@ form label {
   color: $red_color;
   font-size: .9em;
   font-weight: 800;
-  letter-spacing: .20em;
+  letter-spacing: .10em;
   margin: 1em 0 0.4em;
   text-transform: uppercase;
 }
@@ -126,11 +140,11 @@ button {
     -ms-appearance: none;
     appearance: none;
     transition: background-color .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
-    background-color: transparent;
+    background-color: $red_color;
     border: 0;
     border-radius: 0;
     box-shadow: inset 0 0 0 2px $red_color;
-    color: black;
+    color: white;
     display: inline-block;
     font-size: .8em;
     font-weight: 200;
@@ -145,8 +159,8 @@ button {
     margin-bottom: 20px;
 
   &:hover {
-      background-color: $red_color;
-      color: white;
+      background-color: transparent;
+      color: black;
   }
 }
 

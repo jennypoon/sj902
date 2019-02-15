@@ -89,34 +89,35 @@ class RsvpForm extends Component {
 
           {this.state.selectedOption === "1" ? (
             <form className="rsvpForm" onSubmit={this.handleSubmit}>
-              <span>We're happy you can make it! Please complete this form:</span>
               {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
               <p>
               <label>
-                First & Last Name<sup>*</sup>
+                First & Last Name<sup>*</sup> (地址)
               </label>
               <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
 
               <label>
-                Your Email<sup>*</sup>
+                Your Email<sup>*</sup> (電郵)
               </label>
               <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
 
               <label>
-                Total of Seats to Reserve<sup>*</sup>
+                Total of Seats to Reserve<sup>*</sup> (總人數)
               </label>
               <input type="number" placeholder="#" min="1" max="6" name="plusone" onChange={this.handleChange} required></input><br/>
 
               <label>
                Full Name of Guests
               </label>
-              <input type="text" name="guestNames" placeholder="Jane Doe, John Doe" onChange={this.handleChange}></input><br/>
+              <input type="text" name="guestNames" placeholder="Andy Lau, 劉德華" onChange={this.handleChange}></input><br/>
 
                <label>
-               Mailing Address
+               Mailing Address (地址)
               </label>
               <textarea type="text" placeholder="123 ABC Street &#10;City, Province &#10;X1X 1X4" name="mailAddress" onChange={this.handleChange}></textarea><br/>
               </p>
+              <span>We're happy you can make it!</span>
+
               <p>
               <button onClick={this.handleClick}> Submit your RSVP! </button>
               </p>
@@ -124,19 +125,20 @@ class RsvpForm extends Component {
             ) : (
             <div>
               <form className="rsvpForm" onSubmit={this.handleSubmit}>
-                <p>Sorry to hear that you can't make it to our special day!</p>
+
                 {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
                 <p>
                   <label>
                     First & Last Name<sup>*</sup>
                   </label>
-                  <input type="text" name="name" onChange={this.handleChange} required ></input><br/><br/>
+                  <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
+
                   <label>
                     Your Email<sup>*</sup>
                   </label>
-                  <input type="text" name="email" onChange={this.handleChange} required ></input><br/><br/>
+                  <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
                 </p>
-
+                <p>Sorry to hear that you can't make it :( </p>
                 <p>
                   <button onClick={this.handleClick}> Submit your RSVP! </button>
                 </p>

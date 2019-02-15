@@ -19,7 +19,7 @@ class Home extends Component {
         position: 'center',
         textAlign: 'right',
         height: '250px',
-        width: '100%'
+        width: '500px'
   };
 
   const gmapStyle = {
@@ -41,7 +41,7 @@ class Home extends Component {
           <section className="split">
             <section>
               <div className="contact-method">
-                <h3>Got Questions?</h3>
+                <h3><i className="far fa-question-circle"></i> Got Questions? (有問題嗎?)</h3>
                 <hr/>
                 <a href="mailto:stephenjenny2019@gmail.com">stephenjenny2019@gmail.com</a>
               </div>
@@ -49,19 +49,18 @@ class Home extends Component {
 
             <section>
               <div className="contact-method">
-                <h3>Dates and Times</h3>
+                <h3><i className="far fa-clock"></i> Dates and Times (9月2日星期一)</h3>
                 <hr/>
                 <Countdown /> <br/>
-                <span><strong>DEADLINE TO RSVP: MAY 1, 2019</strong></span><br/>
-                <span>Wedding Celebration - Monday, September 2, 2019</span><br/>
-                <span>Doors open at 5PM</span><br/>
-                <span>Dinner commences at 7PM</span>
+                <li><span>Doors open at 5PM</span><br/></li>
+                <li><span>Dinner commences at 7PM</span></li><br/>
+                <span>DEADLINE TO RSVP: MAY 1, 2019</span>
               </div>
             </section>
 
             <section>
               <div className="contact-method">
-                <h3>Address</h3>
+                <h3><i className="fas fa-map-marker-alt"></i> Address</h3>
                 <hr/>
 
                 <span>Kirin Restaurant - Starlight<br />

@@ -34,7 +34,7 @@ class RSVP extends Component {
           </div>
           ) : (
           <div>
-            <h1>RSVP</h1>
+            <h1> <i className="far fa-envelope"></i> RSVP</h1>
             <hr/>
             <RsvpForm invalidState={this.state.invalidEmail}
                       handleClick= {this.handleClick}
