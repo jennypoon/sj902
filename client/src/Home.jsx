@@ -18,8 +18,8 @@ class Home extends Component {
   const mapouterStyle = {
         position: 'center',
         textAlign: 'right',
-        height: '250px',
-        width: '500px'
+        height: '300px',
+        width: '400px'
   };
 
   const gmapStyle = {
@@ -34,8 +34,9 @@ class Home extends Component {
       <Header />
       <section id="contact">
         <div className="inner">
-          <section>
-              <RSVP />
+
+          <section className="rsvpComponent">
+            <RSVP />
           </section>
 
           <section className="split">
@@ -73,6 +74,7 @@ class Home extends Component {
                 </div>
               </div>
             </section>
+
           </section>
         </div>
     </section>
