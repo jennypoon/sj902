@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400');
 
 $red_color: #AC2618;
+$grey: #4F4F4F;
+$bright_blue: #01b9f5;
+$dark_blue: #2A5C99;
+$yellow: #EAC43D;
 
 table, th, td {
   font-family: 'Source Sans Pro', sans-serif;
@@ -17,19 +21,25 @@ th {
 }
 
 h1 {
+  color: white;
+  text-transform: uppercase;
+}
 
-  color: $red_color
+h2 {
+  color: $yellow;
 }
 
 h3 {
-  color: $red_color
+  color: $bright_blue;
+  text-transform: uppercase;
 }
 
 
 * {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  text-transform: uppercase;
+  /*color: $grey;*/
+  text-decoration: none;
   box-sizing: border-box;
 
   &:after, &:before {
@@ -38,10 +48,22 @@ h3 {
 }
 
 .landing {
-  background: url(./images/fall.jpg) no-repeat center center fixed;
+  background: url(./images/landing.jpg) no-repeat center center fixed;
+  background-size: 1200px;
   height: 600px;
   display: block;
   overflow: hidden;
+}
+
+.fas,.far {
+  color: $yellow;
+}
+
+a {
+  color: $grey;
+  &:hover {
+    color: $yellow;
+  }
 }
 
 .inner {
@@ -55,6 +77,10 @@ h3 {
     box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.3);
 }
 
+/*.formContent {
+  width: 500px;
+}*/
+
 section {
   display: block;
   margin: 0;
@@ -64,8 +90,6 @@ section {
   font: inherit;
   vertical-align: baseline;
 }
-
-
 
 #contact {
   overflow-x: hidden;
@@ -82,6 +106,7 @@ section {
     padding-left: 3.25em;
     position: relative;
 }
+
 /*FORM*/
 
 h3 {
@@ -90,6 +115,15 @@ h3 {
 
 .rsvpForm {
   margin: 0 auto;
+}
+
+.rsvpComponent {
+  padding: 10px 40px;
+  background-color: $dark_blue;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.3);
+
 }
 
 
@@ -105,8 +139,8 @@ input,textarea {
   padding: 0.3em;
 
   &:focus:not([type=radio]) {
-    outline: 1px solid grey;
-    font-weight: 400;
+    outline: 1px solid $yellow;
+    font-weight: 800;
   }
 }
 
@@ -117,9 +151,9 @@ textarea {
 
 form label {
   display: block;
-  color: $red_color;
-  font-size: .9em;
-  font-weight: 800;
+  color: white;
+  font-size: .8em;
+  font-weight: 400;
   letter-spacing: .10em;
   margin: 1em 0 0.4em;
   text-transform: uppercase;
@@ -140,11 +174,11 @@ button {
     -ms-appearance: none;
     appearance: none;
     transition: background-color .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
-    background-color: $red_color;
+    background-color: white;
     border: 0;
     border-radius: 0;
-    box-shadow: inset 0 0 0 2px $red_color;
-    color: white;
+    box-shadow: inset 0 0 0 2px $dark_blue;
+    color: $grey;
     display: inline-block;
     font-size: .8em;
     font-weight: 200;
@@ -159,9 +193,20 @@ button {
     margin-bottom: 20px;
 
   &:hover {
-      background-color: transparent;
-      color: black;
+      background-color: $yellow;
+      box-shadow: inset 0 0 0 2px white;
+      color: white;
   }
 }
 
+.formSubmitted {
+  text-align: center;
+  margin-top: 30%;
+  a {
+    color: white;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
 
