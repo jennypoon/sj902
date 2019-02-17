@@ -102,7 +102,7 @@ class RsvpForm extends Component {
               <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
 
               <label>
-                Total of Seats to Reserve<sup>*</sup> (總人數)
+                Total Number of Seats to Reserve<sup>*</sup> (總人數)
               </label>
               <input type="number" placeholder="#" min="1" max="6" name="plusone" onChange={this.handleChange} required></input><br/>
 
