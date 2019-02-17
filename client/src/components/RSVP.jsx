@@ -25,12 +25,12 @@ class RSVP extends Component {
 
   render() {
     return (
-      <div className="rsvpComponent">
+      <div className="formContent">
         {this.state.rsvp ? (
-          <div>
-            <h3>Your RSVP has been sent! Thank You!</h3>
-            <p>Need to make a Change? Just submit another RSVP and we'll use the latest one</p>
-            <p>Got Questions? Email us at: stephenjenny2019@gmail.com or call us at 604-716-7891</p>
+          <div className="formSubmitted">
+            <h2>Your RSVP has been sent! Thank You!</h2>
+            <p>Need to make a Change?<br/>Just submit another RSVP and we'll use the latest one</p>
+            <p>Got Questions?<br/>Email us at: <a href="mailto:stephenjenny2019@gmail.com?subject=Jenny and Stephen's Wedding Inquiry">stephenjenny2019@gmail.com</a><br/>or call us at 604-716-7891</p>
           </div>
           ) : (
           <div>

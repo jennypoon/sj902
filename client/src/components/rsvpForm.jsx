@@ -67,7 +67,7 @@ class RsvpForm extends Component {
       <div>
 
           <label>
-            <span>Can we expect you on September 2, 2019?</span>
+            <span>Can we expect you at our celebration on Sept. 2, 2019?</span>
           </label>
 
           <p>
@@ -129,12 +129,12 @@ class RsvpForm extends Component {
                 {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
                 <p>
                   <label>
-                    First & Last Name<sup>*</sup>
+                    First & Last Name<sup>*</sup> (地址)
                   </label>
                   <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
 
                   <label>
-                    Your Email<sup>*</sup>
+                    Your Email<sup>*</sup> (電郵)
                   </label>
                   <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
                 </p>
