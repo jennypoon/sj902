@@ -67,6 +67,7 @@ class RsvpForm extends Component {
       <div>
 
           <label>
+            <span>請在5月1曰之前通知。謝謝</span><br/><br/>
             <span>Can we expect you at our celebration on Sept. 2, 2019?</span>
           </label>
 
@@ -75,7 +76,7 @@ class RsvpForm extends Component {
               checked={this.state.selectedOption === "1"}
               onChange={this.handleOptionChange}
             />
-            <span>Yes - Count me in!</span>
+            <span>(來) Yes - Count me in!</span>
           </p>
 
           <p>
@@ -83,7 +84,7 @@ class RsvpForm extends Component {
               checked={this.state.selectedOption === "0"}
               onChange={this.handleOptionChange}
             />
-            <span>No - Sorry, can't make it!</span>
+            <span>(不來) No - Sorry, can't make it!</span>
           </p>
 
 
@@ -92,7 +93,7 @@ class RsvpForm extends Component {
               {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
               <p>
               <label>
-                First & Last Name<sup>*</sup>
+                First & Last Name<sup>*</sup> (姓名)
               </label>
               <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
 
@@ -102,12 +103,12 @@ class RsvpForm extends Component {
               <input type="text" placeholder="name@email.com" name="email" onChange={this.handleChange} required ></input><br/>
 
               <label>
-                Total Number of Seats to Reserve<sup>*</sup> (總人數)
+                Total Number of Seats to Reserve<sup>*</sup> (人數)
               </label>
               <input type="number" placeholder="#" min="1" max="6" name="plusone" onChange={this.handleChange} required></input><br/>
 
               <label>
-               Full Name of Guests
+               Full Name of Guests (姓名)
               </label>
               <input type="text" name="guestNames" placeholder="Andy Lau, 劉德華" onChange={this.handleChange}></input><br/>
 
