@@ -74,8 +74,39 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-
           </section>
+
+
+          <section className="split alt">
+            <section>
+              <div className="contact-method">
+                <h3><i className="far fa-question-circle"></i> 有問題嗎?</h3>
+                <hr/>
+                <a href="mailto:stephenjenny2019@gmail.com?subject=Jenny and Stephen's 9.02 Wedding Inquiry">Send us an email</a>
+              </div>
+            </section>
+
+            <section>
+              <div className="contact-method">
+                <h3><i className="far fa-clock"></i> 9月2日星期一</h3>
+                <hr/>
+                <Countdown /> <br/>
+                <li><span>Doors open at 5PM</span><br/></li>
+                <li><span>Dinner commences at 7PM</span></li><br/>
+              </div>
+            </section>
+
+            <section>
+              <div className="contact-method">
+                <h3><i className="fas fa-map-marker-alt"></i> 星光 麒麟</h3>
+                <hr/>
+                <span>Kirin Restaurant - Starlight<br />
+                350 Gifford St<br />
+                New Westminster, BC V3M 7A3</span><br/><br/>
+              </div>
+            </section>
+          </section>
+
         </div>
     </section>
   </div>
