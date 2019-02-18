@@ -6,6 +6,9 @@ $grey: #4F4F4F;
 $bright_blue: #01b9f5;
 $dark_blue: #2A5C99;
 $yellow: #EAC43D;
+$width: 950px;
+
+/*ADMIN*/
 
 table, th, td {
   font-family: 'Source Sans Pro', sans-serif;
@@ -18,6 +21,18 @@ table, th, td {
 
 th {
   width: 15%;
+}
+/*--------------------*/
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:after, &:before {
+    box-sizing: border-box;
+  }
 }
 
 h1 {
@@ -34,43 +49,39 @@ h3 {
   text-transform: uppercase;
 }
 
-
-* {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  /*color: $grey;*/
-  text-decoration: none;
-  box-sizing: border-box;
-
-  &:after, &:before {
-    box-sizing: border-box;
-  }
-}
-
 .landing {
   background: url(./images/landing.jpg) no-repeat 0px 0px fixed;
-  background-color: grey;
+  background-color: #f2f2f2;
   background-size: 1200px;
   height: 600px;
   display: block;
   overflow: hidden;
-}
+   @media only screen and (max-width: 700px) {
+      background: url(./images/landing.jpg) no-repeat 10px -100px fixed;
+      height: 400px;
+      background-size: 900px;
+    }
+  }
 
 .triangle {
   height: 100vh;
   width: 100vw;
-  background-color: transparent;
-  /*background-image: linear-gradient(-140deg, $yellow 35%, transparent 20%) ;*/
+  background: linear-gradient(-130deg, $yellow 35%, transparent 20%) no-repeat center 0px fixed;
   display: block;
   overflow: hidden;
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
+}
 
-  &::after {
-    bottom: 0;
-    right: 0;
-    content: "J | S";
-    font-size: 45px;
-    text-align: center;
-  };
+.logo {
+  float: right;
+  margin: 40px;
+  width: 300px;
+  overflow: hidden;
+      @media only screen and (max-width: 1200px) {
+        width: 25%;
+    }
 }
 
 .fas,.far {
@@ -93,11 +104,11 @@ a {
     display: flex;
     padding: 10px;
     box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.3);
-}
 
-/*.formContent {
-  width: 500px;
-}*/
+    @media only screen and (max-width: $width) {
+      display: block;
+    }
+}
 
 section {
   display: block;
@@ -114,15 +125,35 @@ section {
   background-color: #f2f2f2;
 }
 
+.alt {
+  display: none;
+  @media only screen and (max-width: $width) {
+    display: flex;
+  }
+  @media only screen and (max-width: 550px) {
+    display: block;
+  }
+}
+
 #contact>.inner>.split>* {
     padding: 1em 0 1em 1em;
     position: relative;
     margin-right: 20px;
 }
 
+[class='split'] {
+  @media only screen and (max-width: $width) {
+    display: none;
+  }
+}
+
 .contact-method {
-    padding-left: 3.25em;
+    padding-left: 1.25em;
     position: relative;
+
+    @media only screen and (max-width: $width) {
+      padding-left: 0px;
+    }
 }
 
 /*FORM*/
@@ -141,7 +172,6 @@ h3 {
   border-radius: 5px;
   color: white;
   box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.3);
-
 }
 
 
