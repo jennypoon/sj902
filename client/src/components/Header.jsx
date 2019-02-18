@@ -1,9 +1,12 @@
 import React from 'react';
+import logo from '../images/vista_logo.png'
 
 function Header() {
     return (
       <div className="landing">
-        <div className="triangle"></div>
+        <div className="triangle">
+          <img className="logo" src={logo} alt="logo"/>
+        </div>
       </div>
     )
 }
