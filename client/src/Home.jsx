@@ -55,7 +55,7 @@ class Home extends Component {
                 <Countdown /> <br/>
                 <li><span>Doors open at 5PM</span><br/></li>
                 <li><span>Dinner commences at 7PM</span></li><br/>
-                <span>DEADLINE TO RSVP: MAY 1, 2019</span>
+                <span>DEADLINE TO RSVP: JULY 1, 2019</span>
               </div>
             </section>
 
