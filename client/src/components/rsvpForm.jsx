@@ -108,7 +108,7 @@ class RsvpForm extends Component {
               <input type="number" placeholder="#" min="1" max="6" name="plusone" onChange={this.handleChange} required></input><br/>
 
               <label>
-               Full Name of Guests (姓名)
+               Full Name of Guests
               </label>
               <input type="text" name="guestNames" placeholder="Andy Lau, 劉德華" onChange={this.handleChange}></input><br/>
 
