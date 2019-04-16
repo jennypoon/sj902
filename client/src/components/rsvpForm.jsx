@@ -34,6 +34,7 @@ class RsvpForm extends Component {
   }
 
   validateEmail(input) {
+    input = input.trim()
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(input).toLowerCase());
   }
@@ -130,7 +131,7 @@ class RsvpForm extends Component {
                 {this.props.invalidState ? (<p style={{color:"red",textAlign:"center"}}> - - Please enter a valid email address - - </p>) : "" }
                 <p>
                   <label>
-                    First & Last Name<sup>*</sup> (地址)
+                    First & Last Name<sup>*</sup> (姓名)
                   </label>
                   <input type="text" name="name" placeholder="Full Name" onChange={this.handleChange} required ></input><br/>
 
